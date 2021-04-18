@@ -5,7 +5,7 @@ const feel = document.querySelector('.myInput')
 const generate = document.querySelector('#generate')
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
 
 // function to get zip from inputs to pass it weather api 
 const performAction = async () => {
@@ -59,8 +59,8 @@ const updateUI = async () => {
   let date = document.querySelector('#date')
   let temp = document.querySelector('#temp')
   let content = document.querySelector('#content')
-   temp.innerHTML = ` Temprature: ${data.temp} <span> &#8451; </span>`
-  date.textContent = `date: ${data.date}` 
-  content.textContent = `i feel: ${data.feel}`
+   temp.innerHTML = ` <p>  Temprature: ${data.temp} <span> &#8451; </span> </p> `
+  date.innerHTML = ` <p> date: ${data.date} </p>` 
+  content.innerHTML = ` <p> i feel: ${data.feel} </p>`
 
 }
